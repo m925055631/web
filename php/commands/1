@@ -1,0 +1,35 @@
+
+<?php
+
+require_once('Command.php');
+require_once(dirname(__FILE__) . '/../DBManager.php');
+
+class LotteryactivityCommand extends Command {
+
+	function excute(CommandContext $context) {
+		$db = new DBManager();
+		$operation = $context->get("operation");
+		if($operation=="start"){
+				$result = $db->query( "SELECT user_id,phonenumber FROM `users` WHERE status=0" );
+			 	$users_mes =  json_decode( json_encode($result),true);
+                		$results = array();
+            		for( $i = 0; $i < count($users_mes); $i ++ ) {
+                        	$tmp = array();
+                        	$tmp['user_id']=$users_mes[$i]['user_id'];
+                        	$tmp['phonenumber']=$users_mes[$i]['phonenumber'];
+                        	$results[$i]=$tmp;
+        
+	        	}
+
+                	return $results;	
+	
+	//	return $result; 	
+		}else{
+			$phonenumber = $context->get("phonenumber");
+			$sql = "update `users` set status=1 where phonenumber=$phonenumber"; 
+			$db->excute($sql);	
+		}
+	}
+}
+
+?>

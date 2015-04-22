@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!--    <link rel="shortcut icon" href="../assets/img/favicon.png">-->
+
+    <title>抽奖活动</title>
+
+    <!-- Bootstrap -->
+    <link href="../assets2/css/bootstrap2.css" rel="stylesheet">
+	  <link href="../assets2/css/bootstrap-theme2.css" rel="stylesheet">
+
+    <!-- siimple style -->
+    <link href="../assets2/css/style2.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" href="include/css/style.css" />
+<link rel="stylesheet" href="include/css/tabs.css" />
+<script src="include/js/libs/modernizr.min.js"></script>
+<script src="include/js/libs/jquery.min.js"></script>
+<script src="include/js/jquery.tabs.js"></script>
+<script src="include/js/tab_design.js"></script>
+
+    <script src="../javascript/lib/jquery-1.8.3.min.js"></script>
+    <script src="../assets2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../javascript/pages/lotteryactivity.js"></script>
+<style type="text/css">
+#roll{font-size: 66px; color:#f30}
+
+#roll{
+  position:relative;/* 固定位置 */
+    top:0px;
+    margin: 30px 80px 20px;
+}
+
+#turn{
+  width: 540px;
+  height: 90px;
+  margin: 0 auto;
+}
+#result{ font-size:24px}
+#stop{display:none}
+#option{
+    padding-left: 0px;
+    border-left-width: 0px;
+  margin-left: 140px;
+  margin-top: 12px;
+  float: right;
+  }
+#divLeft
+{
+    position:fixed;/* 固定位置 */
+    top:200px;
+<!--    border:solid 1px #ccc;-->
+    width:80px;
+    height:300px;
+}    
+
+#result{
+     width:318px;
+     height:700px;
+<!-- border:solid 1px #ccc;-->
+     margin:0 auto;/* 水平居中 */
+
+}
+</style>
+
+  </head>
+
+  <body  onresize="setDivLeftPosition();">
+
+
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+
+          <a class="navbar-brand" float="left" href="javascript: logout()">退出登陆</a>
+        </div>
+	       <div class="navbar-collapse collapse"></div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+<div id="result" style="
+    margin-left: 230px;
+    padding-top: 20px;
+    color: #555;
+">
+  <div id="page-wrap">
+    
+    <h1>中奖号码<br> </h1> 
+    <div id="turn">
+      <div  id="roll" ></div>
+    </div>
+    <div id="tab_design">
+
+      <nav class="tab_menu clearfix">
+
+        <ul>
+          <li>
+            <a href="#clock" id="top1">
+            <img src="include/images/24/1.png" alt="" />特等奖           
+            </a>
+          </li>
+          <li>
+            <a href="#weather" id="first">
+              <img src="include/images/24/2.png" alt="" />一等奖
+            </a>
+          </li>
+          <li>
+            <a href="#calender" id="second">
+              <img src="include/images/24/3.png" alt="" />二等奖
+            </a>
+          </li>
+          <li>
+            <a href="#chart" id="third">
+              <img src="include/images/24/4.png" alt="" />三等奖
+            </a>
+          </li>
+          <li>
+            <a href="#super" id="superluck">
+              <img src="include/images/24/5.png" alt="" />超级幸运奖
+            </a>
+          </li>
+          <li>
+            <a href="#chat" id="luck">
+              <img src="include/images/24/6.png" alt="" />幸运奖
+            </a>
+          </li>
+        </ul>
+      </nav><!-- e: .tab_menu -->
+      <div class="tab_contents" style="height:336px;">
+        <ul>
+          <li id="clock">
+                <p>特等奖（1名）</p>
+                <div id="39" class="top"></div>
+             
+          </li>
+          <li id="weather">
+                <p>一等奖（1名）</p>
+                <div id="38" class="top"></div>
+          </li>
+          <li id="calender">
+                <p>二等奖（2名）</p>
+                <div id="36" class="top"></div>
+                <div id="37" class="top"></div>
+          </li>
+          <li id="chart">
+                <p>三等奖（5名）</p>
+                <div id="31" class="top3"></div>
+                <div id="32" class="top3"></div>
+                <div id="33" class="top3"></div>
+                <div id="34" class="top3"></div>
+                <div id="35" class="top3"></div>
+          </li>
+          <li id="super">
+               <table class="zebra">
+               <thead>                      
+                      <th>超级幸运奖（10名）</th>
+                </thead>
+                 <tr>
+                   <td id="21"></td><td id="22"></td><td id="23"></td><td id="24"></td>
+                </tr>
+                <tr>
+                   <td id="25"></td><td id="26"></td><td id="27"></td><td id="28"></td>
+                 </tr>
+                 <tr>   
+                   <td id="29"></td><td id="30">
+                </tr>
+               </table>
+          </li>
+          <li id="chat">
+               <table class="zebra">
+                 <thead>                      
+                      <th>幸运奖(20名)</th>
+                </thead>
+                 <tr>
+                   <td id="1"></td><td id="2"></td><td id="3"></td><td id="4"></td>                   
+                 </tr>
+                 <tr>  
+                   <td id="5"></td><td id="6"></td><td id="7"></td><td id="8"></td>
+                 </tr>
+                 <tr>           
+                   <td id="9"></td><td id="10"></td><td id="11"></td><td id="12"></td>
+                 </tr>
+                 <tr>
+                   <td id="13"></td><td id="14"></td><td id="15"></td><td id="16"></td>
+                 </tr>
+                 <tr>
+                   <td id="17"></td><td id="18"></td><td id="19"></td><td id="20"></td>
+                  </tr>
+               </table>
+          </li>
+        </ul>
+      </div><!-- e: .tab_contents -->
+    </div><!-- e: #tab_design --> 
+          
+  </div><!-- e: #page-wrap -->
+</div>
+
+	<div id="divLeft">
+				
+					<input type="hidden" id="mid" value="">
+					<br >
+				<div >
+          <br>
+					<p>
+          <input type="button" class="btn btn-theme" id="start" value="开始抽奖" style="margin-left: 120px;">
+					<input type="button" class="btn btn-theme" id="stop" value="停止抽奖" style="margin-left: 120px;">          
+          </p>     
+				</div>
+	</div>
+
+	<div id="footer">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-lg-6 col-lg-offset-3">
+  					<p class="copyright"><input type="button" id="restart" value="Copyright" style="border:none;background:#fd680e;"/> <input type="button" id="clear" value="&copy; 2015" style="border:none;background:#fd680e;"/> <input type="button" id="hide" value="PSC" style="border:none;background:#fd680e;"/></p>
+  			</div>
+  		</div>		
+  	</div>	
+	</div>
+
+  </body>
+</html>
+<script type="text/javascript" >
+function logout() 
+{ 
+        var xmlhttp;
+        if (window.XMLHttpRequest)  
+        {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp=new XMLHttpRequest();  
+        }
+        else  
+        {// code for IE6, IE5  
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
+        }
+        xmlhttp.onreadystatechange=function()  
+        {  
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)    
+                {    
+                     //   document.getElementById("totalpoints").innerHTML=xmlhttp.responseText;  
+						setTimeout(function() {
+					window.location.href = "admin.html";			  		
+			  	}, 500);
+                }  
+        }
+	 
+        //var LanguageFluency = document.getElementById("LanguageFluency").value;
+       // var Clear = document.getElementById("Clear").value;
+       //  var Ready = document.getElementById("Ready").value;
+       // var Theme = document.getElementById("Theme").value;
+       // var HarvestFeelings = document.getElementById("HarvestFeelings").value;
+        xmlhttp.open("GET","../php/takeAction.php?action=adminout",true);
+        xmlhttp.send();
+}
+    //动态调整左侧Div的位置
+    function setDivLeftPosition() {
+        var divMain = document.getElementById("result");
+        document.getElementById("divLeft").style.left = (divMain.offsetLeft - 260) + "px";
+    }
+    setDivLeftPosition();
+
+
+    //        var top, left;
+    //        if (div.currentStyle) { left = div.currentStyle.left; top = div.currentStyle.top; }
+    //        else if (window.getComputedStyle) { left = window.getComputedStyle(div, null).left; top = window.getComputedStyle(div, null).top; }
+    //        alert(left + "," + top);
+
+</script>

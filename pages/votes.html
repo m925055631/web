@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>厨艺大赛投票</title>
+		<meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="people">
+        <meta name="author" content="">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/supersized.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+<a class="navbar-brand" href="javascript: logout()"></a>
+        <div class="page-container">
+            
+            <h1>请对下面菜式投票</h1>
+            <h2>(每人最多投5票)</h2>
+            <form  id="myform">
+              <div class="form-group">
+                <li id="memberList" class="unstyled"></li>
+              </div>
+                <button id="submitButton" type="submit" >提交</button>
+            </form>
+        </div>
+		
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.8.2.min.js"></script>
+        <script src="assets/js/supersized.3.2.7.min.js"></script>
+        <script src="assets/js/supersized-init.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        
+            <div class="footer">
+                    <p class="copyright">Copyright &copy; 2015 PSC</p>
+            </div>
+        
+    </body>
+
+</html>
+<script type="text/javascript" src="../javascript/pages/votes.js"></script>
+
+<script type="text/javascript" >
+function logout() 
+{ 
+        var xmlhttp;
+        if (window.XMLHttpRequest)  
+        {// code for IE7+, Firefox, Chrome, Opera, Safari  
+                xmlhttp=new XMLHttpRequest();  
+        }
+        else  
+        {// code for IE6, IE5  
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
+        }
+        xmlhttp.onreadystatechange=function()  
+        {  
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)    
+                {    
+                     //   document.getElementById("totalpoints").innerHTML=xmlhttp.responseText;  
+                        setTimeout(function() {
+                    window.location.href = "login.html";                    
+                }, 500);
+                }  
+        }
+     
+        //var LanguageFluency = document.getElementById("LanguageFluency").value;
+       // var Clear = document.getElementById("Clear").value;
+       //  var Ready = document.getElementById("Ready").value;
+       // var Theme = document.getElementById("Theme").value;
+       // var HarvestFeelings = document.getElementById("HarvestFeelings").value;
+        xmlhttp.open("GET","../php/takeAction.php?action=logout",true);
+        xmlhttp.send();
+}
+</script>

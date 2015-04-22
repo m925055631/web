@@ -1,0 +1,90 @@
+
+.group-item{
+	float: left;
+	border-top: solid 1px #CCBFB2;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	height: 90px;
+	overflow: hidden;
+}
+.group-item .pic{
+	padding-top: 10px;
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.info{
+	float: left;
+	width: 220px;
+	padding-left: 10px;
+}
+.info .title{
+	line-height: 2em;
+}
+.info .title .follow-num{
+	color: #C2978C;
+}
+.info p{
+	color: #C2978C;
+	overflow: hidden;
+	height: 50px;
+	font: 13px Arial,Helvetica,sans-serif;
+}
+
+#rightSide .group-item{
+	padding-left: 0px;
+	border-top: 0;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+#rightSide .info{
+	width: 160px;
+	height: 60px;
+}
+
+/* groupDetail */
+#header .pic{
+	width: 80px;
+	float: left;
+}
+#header img{
+	height: 50px;
+	width: 50px;
+
+}
+#header .title{
+	width: 300px;
+	float: left;
+}
+#header h2{
+	display: inline;
+}
+
+.intro {
+	background: #E2D4C8;
+	padding: 20px;
+	border-radius: 5px;
+	text-indent: 2em;
+	line-height: 1.8em;
+}
+.intro .createBy{
+	height: 40px;
+}
+
+.groupMember li{
+	margin-left: 10px;
+	padding: 5px 0 5px 0;
+}
+.groupMember li .pic{
+	float: left;
+	width: 40px;
+}
+.groupMember li .pic img{
+	width: 30px;
+	height: 30px;
+
+}
+.groupMember li .name{
+	float: left;
+}

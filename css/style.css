@@ -1,0 +1,221 @@
+﻿html,body{
+  height: 100%;
+}
+html{
+  overflow-y:scroll;
+}
+
+.push{
+  height: 60px;
+}
+.push_20{
+  height: 20px;
+}
+
+#footer{
+  background: #b6dde7;
+  margin-top:-60px;
+  text-align: center;
+  height: 70px;
+}
+#footer p{
+  padding: 10px;
+}
+
+.min-height {
+	min-height: 110px;
+}
+p{
+  font-family:  微软雅黑;
+}
+
+p.welcome {
+  padding: 10px 15px 10px;
+  margin: 0 auto;
+}
+
+#current{
+  margin-top: -50px;
+  margin-left: 285px;
+  margin-bottom: -210px;
+}
+
+#text{
+  margin-top: -490px;
+  margin-bottom: 400px;
+  padding-left: 350px;
+  padding-right: 200px;
+}
+
+#text h2{
+  margin-left: 180px;
+  padding-top: 40px;
+}
+
+#text #introduction{
+  padding: 0px 40px;
+}
+
+#wen{
+  color: #000000;
+  padding-top: 10px;
+  padding-left: 140px;
+}
+
+#testDiv{
+  width:500px; 
+  height:350px; 
+  background-image:url(../img/bg2.jpg);
+  margin: -350px -330px;
+  position:relative; 
+}
+
+.controls .btn-info{
+  width: 80px;
+  height: 40px;
+  font-size: 23px;
+  margin-left: 60px;
+}
+
+#createResource .btn btn-info{
+  padding-left: 10px;
+}
+
+#myform{
+  padding: 40px 80px;
+}
+
+#btn00 .btn btn-info{
+  width: 50px;
+  height: 40px;
+}
+
+#totalpoints{
+  margin: 30px -260px;
+  color: red;
+  font-size: solid;
+}
+
+#db_table{
+  margin: 40px 100px;
+}
+
+#show_time{
+  margin: -60px 210px;
+  margin-bottom: 1200px;
+}
+
+#first{
+  line-height: 20px;
+  font-size: 15px;
+  position:absolute;
+  left:210px;
+  top:145px;
+}
+
+#second{
+  line-height: 20px;
+  font-size: 15px;
+  position:absolute;
+  left:430px;
+  top:145px;
+}
+
+#third{
+  line-height: 20px;
+  font-size: 15px;
+  position:absolute;
+  left:660px;
+  top:145px;
+}
+
+#forth{
+  line-height: 20px;
+  font-size: 15px;
+  position:absolute;
+  left:210px;
+  top:445px;
+}
+
+#fifth{
+  line-height: 20px;
+  font-size: 15px;
+  position:absolute;
+  left:430px;
+  top:445px;
+}
+
+#sixth{
+  line-height: 20px;
+  font-size: 15px;
+  position:absolute;
+  left:660px;
+  top:445px;
+}
+
+#seven{
+  line-height: 20px;
+  font-size: 15px;
+  position:absolute;
+  left:210px;
+  top:745px;
+}
+
+#eight{
+  line-height: 20px;
+  font-size: 15px;
+  position:absolute;
+  left:430px;
+  top:745px;
+}
+
+#night{
+  line-height: 20px;
+  font-size: 15px;
+  position:absolute;
+  left:660px;
+  top:745px;
+}
+
+#ten{
+  line-height: 20px;
+  font-size: 15px;
+  position:absolute;
+  left:210px;
+  top:1045px;
+}
+
+#eleven{
+  line-height: 20px;
+  font-size: 15px;
+  position:absolute;
+  left:430px;
+  top:1045px;
+}
+
+#twlve{
+  line-height: 20px;
+  font-size: 15px;
+  position:absolute;
+  left:660px;
+  top:1045px;
+}
+
+#content{
+  margin: -40px 210px;
+}
+
+#content_text{
+  margin: -310px 320px 200px 250px;
+}
+
+#span_style{
+   font-weight: bold;
+}
+
+#guest{
+  position:absolute;
+  left:250px;
+  top:530px;
+  font-weight: bold;
+}

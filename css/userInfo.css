@@ -1,0 +1,79 @@
+.userInfo{
+	height: 80px;
+}
+.userInfo .pic{
+	width: 80px;
+	height: 80px;
+	float: left;
+}
+.userInfo .pic img{
+	width: 60px;
+	height: 60px;
+}
+.userInfo .info{
+	width: 860px;
+	height: 60px;
+	float: left;
+	overflow: hidden;
+}
+.userInfo .info .brief{
+	font-size: 0.5em;
+	font-weight: lighter;
+}
+
+.group-item{
+	float: left;
+	border-top: solid 1px #CCBFB2;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	height: 90px;
+	overflow: hidden;
+}
+.group-item .pic{
+	padding-top: 10px;
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.group-item .info{
+	float: left;
+	width: 220px;
+	padding-left: 10px;
+}
+.group-item .info .title{
+	line-height: 2em;
+}
+.group-item .info .title .follow-num{
+	color: #C2978C;
+}
+.group-item .info p{
+	color: #C2978C;
+	overflow: hidden;
+	height: 50px;
+	font: 13px Arial,Helvetica,sans-serif;
+}
+#comments{
+	margin-top: 40px;
+}
+#comments .commentator{
+	width: 8%;
+	float: left;
+}
+#comments .comment{
+	margin-left: 2%;
+	width: 90%;
+	float: left;
+	min-height: 100px;
+	max-height: 300px;
+	overflow: hidden;
+}
+#comments .comment .title{
+	background: #D8C5B0;
+	padding: 4px 0 4px 10px;
+}
+.comment .context p{
+	text-indent: 2em;
+	line-height: 1.8em;
+	font-size: 1em;
+}
